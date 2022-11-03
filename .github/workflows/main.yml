@@ -10,5 +10,3 @@ jobs:
         uses: ./
         with:
           manifest-path: './example-rust/Cargo.toml'
-
-        
