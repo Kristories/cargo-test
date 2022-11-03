@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Testing
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Test local rust"
+        uses: ./
+        with:
+          manifest-path: './example-rust/Cargo.toml'
+
+        
