@@ -1,0 +1,23 @@
+name: "Cargo Test"
+author: "Devtical"
+description: "Execute all unit and integration tests and build examples of a local package."
+branding:
+  icon: "check-circle"
+  color: "green"
+
+inputs:
+  manifest-path:
+    description: "Path to Cargo.toml"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: "cargo test with manifest-path"
+      shell: "bash"
+      if: "${{ inputs.manifest-path != '' }}"
+      run: "cargo test --manifest-path ${{ inputs.manifest-path }}"
+    - name: "cargo test without manifest-path"
+      shell: "bash"
+      if: "${{ inputs.manifest-path == '' }}"
+      run: "cargo test"
