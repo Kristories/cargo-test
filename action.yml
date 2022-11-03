@@ -1,5 +1,5 @@
 name: "Cargo Test"
-author: "Devtical"
+author: "Wahyu Kristianto"
 description: "Execute all unit and integration tests and build examples of a local package."
 branding:
   icon: "check-circle"

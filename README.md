@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "Test local rust"
-        uses: devtical/cargo-test@v1
+        uses: kristories/cargo-test@v1
         with:
           manifest-path: './example-rust/Cargo.toml'
 ```
